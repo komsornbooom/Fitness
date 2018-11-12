@@ -4,6 +4,8 @@ Setup → Device
  2. npm
  3. ionic
  4. sdk
+ 5. angular
+ 
  already
  ----------------------
  clone project : git clone https://github.com/komsornbooom/Fitness.git |
