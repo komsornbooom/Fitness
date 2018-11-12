@@ -1,0 +1,82 @@
+<!--
+  Generated template for the TimerPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="home1">
+    <ion-title>จับเวลา</ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding align=center class="bg">
+  <fieldset *ngIf='name' class="fie">
+    <legend align=left><b>ลู่วิ่ง</b></legend>
+    <fieldset>
+      <div align=center class="size1">
+        <img src="assets/imgs/training.gif">
+      </div>
+    </fieldset>
+    <ion-item class="top" style="background-color: rgb(214, 127, 169)" class="font">
+      <ion-label class="font">เลือกรูปแบบการเทรน</ion-label>
+      <ion-select [(ngModel)]="Notifications" interface="action-sheet">
+        <ion-option value='' selected="true">เลือก</ion-option>
+        <ion-option value=3>เดิน (ช้า)</ion-option>
+        <ion-option value=6.5>วิ่ง 6 km/hr</ion-option>
+        <ion-option value=7.5>วิ่ง 7 km/hr</ion-option>
+        <ion-option value=8.5>วิ่ง 8 km/hr</ion-option>
+        <ion-option value=9.5>วิ่ง 9 km/hr</ion-option>
+        <ion-option value=10.5>วิ่ง 10 km/hr</ion-option>
+      </ion-select>
+    </ion-item>
+  </fieldset>
+  <fieldset *ngIf='name2' class="fie">
+    <legend align=left><b>จักรยานฟิตเนส</b></legend>
+    <fieldset>
+      <div align=center class="size1">
+        <img src="assets/imgs/rungif.gif">
+      </div>
+    </fieldset>
+    <ion-item class="top" style="background-color: rgb(214, 127, 169)" class="font">
+      <ion-label class="font">เลือกรูปแบบการเทรน</ion-label>
+      <ion-select [(ngModel)]="Notifications" interface="action-sheet">
+        <ion-option value='' selected="true">เลือก</ion-option>
+        <ion-option value=4>ปั่น 16 km/hr</ion-option>
+        <ion-option value=6>ปั่น 19 km/hr</ion-option>
+        <ion-option value=8>ปั่น 24 km/hr</ion-option>
+        <ion-option value=10>ปั่น 32 km/hr</ion-option>
+        <ion-option value=12>ปั่น 37 km/hr</ion-option>
+      </ion-select>
+    </ion-item>
+  </fieldset>
+  <fieldset *ngIf='name1' class="fie">
+    <legend align=left><b>โยคะ & แอโรบิค</b></legend>
+    <fieldset>
+      <div align=center class="size">
+        <img src="assets/imgs/yoga11.png">
+      </div>
+    </fieldset>
+    <ion-item class="top" style="background-color: rgb(214, 127, 169)" class="font">
+      <ion-label class="font">เลือกรูปแบบการเทรน</ion-label>
+      <ion-select [(ngModel)]="Notifications" interface="action-sheet">
+        <ion-option value='' selected="true">เลือก</ion-option>
+        <ion-option value=2.51>โยคะ </ion-option>
+        <ion-option value=5>แอโรบิค (ช้า)</ion-option>
+        <ion-option value=7>แอโรบิค (เร็ว)</ion-option>
+      </ion-select>
+    </ion-item>
+  </fieldset>
+  <div [(ngModel)]="timer" mbsc-timer [mbsc-options]="timerSettings" class="top"></div>
+  <table id="laps"></table>
+  <div class="top">
+    <button ion-button class="btn" (click)='Cal()'>
+      <ion-icon name="ios-calculator"></ion-icon>&nbsp;
+      คำนวณแคลอรี่
+    </button>
+  </div>
+  <div align=center class="al">
+    <img src="assets/imgs/run3.png">
+  </div>
+
+</ion-content>

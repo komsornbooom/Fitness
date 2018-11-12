@@ -1,0 +1,69 @@
+<!--
+  Generated template for the AerobicPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="home1">
+    <ion-title>แอโรบิค</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding class="bg">
+  <ion-refresher (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content pullingIcon="arrow-dropdown" pullingText="Pull to refresh" refreshingSpinner="circles"
+      refreshingText="Refreshing...">
+    </ion-refresher-content>
+  </ion-refresher>
+  <fieldset class="top" class="font">
+    <legend align=left><b>สมัครเข้าคอร์สแอโรบิค</b></legend>
+    <ion-grid class="gg">
+      <table border=3 align=center width="100%" class="table">
+        <tr style="background-color: #f14acd">
+          <th>เลือก</th>
+          <th>คอร์สที่</th>
+          <th colspan="2">วันที่-เวลาที่เปิดสอน</th>
+          <th>จำนวนที่รับ</th>
+          <th>สมัครทั้งหมด</th>
+        </tr>
+        <tr style="background-color: #f1fa6f">
+          <td>
+            <div *ngFor="let item of course">
+              <input type="radio" name="radio1" [(ngModel)]="radio1" value="{{item}}">
+            </div>
+          </td>
+          <td>
+            <div *ngFor="let num of count">
+              {{ num }}
+            </div>
+          </td>
+          <td th colspan="2">
+            <div *ngFor="let item1 of getDateTime">
+              {{ item1 }}
+            </div>
+          </td>
+          <td>
+            <div *ngFor="let item2 of getCount">
+              {{ item2 }}
+            </div>
+          </td>
+          <td>
+            <div *ngFor="let item3 of reg">
+              {{ item3 }}
+            </div>
+          </td>
+        </tr>
+      </table>
+    </ion-grid>
+  </fieldset>
+  <div align=center class="top">
+    <button ion-button class="btn" (click)='regCourse()'>
+      <ion-icon name="md-book"></ion-icon>&nbsp;
+      สมัคร
+    </button>
+  </div>
+</ion-content>

@@ -1,0 +1,48 @@
+<!-- Generated template for the CalculatePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation. -->
+
+<ion-header>
+  <ion-navbar color="home1">
+    <ion-title>คำนวณแคลอรี่</ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding="padding" class="bg">
+  <ion-card-content align="center" style="background-color: rgb(132, 173, 192)">
+    <div class="font">
+      <h4>
+        <ion-icon name="ios-timer"></ion-icon>
+        <u>ระยะเวลาออกกำลัง</u>
+      </h4>
+      <div style="background-color: rgb(192, 82, 128)" class="fc">
+        <h4>
+          <b>
+            {{hr}}hr : {{min}}m : {{sec}}s : {{fra}}
+          </b>
+        </h4>
+      </div>
+    </div>
+  </ion-card-content>
+  <fieldset style="background-color: rgb(227, 231, 233)" class="top">
+    <legend align="left">
+      <b>แคลอรี่ที่เผาผลาญไปแล้ว</b>
+    </legend>
+    <div align="center">
+      <h4>
+        เผาผลาญไปทั้งหมด : &nbsp;{{calburn}} &nbsp; แคลอรี่
+      </h4>
+      <br>
+    </div>
+  </fieldset>
+  <div class="top" align="center">
+    <button ion-button="ion-button" class="btn" (click)="saveTo()">
+      <ion-icon></ion-icon>
+      &nbsp;
+      บันทึก/เสร็จสิ้น
+    </button>
+  </div>
+  <div align="center" class="top">
+    <img src="assets/imgs/run5.png">
+  </div>
+</ion-content>

@@ -1,0 +1,45 @@
+<ion-header>
+  <ion-navbar color="home1">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title align= " center">เมนูหลัก</ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content align = "center" style="background-color:#FFAFBD">
+  <div style="margin-top: 20px">
+    <img src="assets/imgs/fitness.png">
+  </div>
+  <div style="margin-top: 50px"> 
+    <ion-grid >
+      <ion-row >
+        <ion-col> 
+          <ion-img style="width: 150px; height: 122px;" (click)="imgpro()" src="assets/imgs/profile.png">
+          </ion-img> 
+        </ion-col>
+        <ion-col> 
+          <ion-img style="width: 150px; height: 122px;" (click)="imgcourse()" src="assets/imgs/course.png">
+          </ion-img>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+  <div style="margin-top: 50px">
+    <ion-grid class="grid-basic-page" >
+      <ion-row >
+        <ion-col>
+          <ion-img style="width: 150px; height: 122px;" (click)="imgscan()" src="assets/imgs/Qr.png">
+          </ion-img>
+        </ion-col>
+        <ion-col>
+          <ion-img style="width: 150px; height: 122px;" (click)="imgschedule()" src="assets/imgs/calendar.png">
+          </ion-img>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+<div align = center class = "top">
+    <img src = "assets/imgs/run4.png">
+    </div>
+</ion-content>
+ 

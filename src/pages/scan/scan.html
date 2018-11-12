@@ -1,0 +1,74 @@
+<ion-header>
+  <ion-navbar color="h">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title align=" center">สแกนคิวอาร์โค้ด</ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding align=" center" class="bg">
+  <ion-refresher (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content pullingIcon="arrow-dropdown" pullingText="Pull to refresh" 
+    refreshingSpinner="circles"
+    refreshingText="Refreshing...">
+    </ion-refresher-content>
+  </ion-refresher>
+  <div align=center class="top">
+    <img src="assets/imgs/scan.png">
+  </div>
+  <div class="top">
+    <button ion-button class="btn" (click)="scanCode()">
+      <ion-icon name="qr-scanner"></ion-icon>&nbsp;
+      สแกนคิวอาร์โค้ด
+    </button>
+  </div>
+  <ion-card *ngIf='scannedCode'>
+    <ion-card-content>
+      <p>โค้ดของฉัน: {{ scannedCode }}</p>
+    </ion-card-content>
+  </ion-card>
+
+  <fieldset class="top" class="font">
+    <legend align=left><b>เครื่องเล่นในฟิตเนส</b></legend>
+    <ion-grid class="gg">
+      <ion-row>
+        <ion-col class="basic">
+          <table border=1 align=center class="table">
+            <tr style="background-color: #f14acd">
+              <th>รหัสเครื่อง</th>
+            </tr>
+            <tr style="background-color: #f1fa6f" *ngFor="let item of selectcity">
+              <td>
+                {{ item }}
+              </td>
+            </tr>
+          </table>
+        </ion-col>
+        <ion-col class="basic">
+          <table border=1 align=center class="table">
+            <tr style="background-color: #f14acd">
+              <th>ชื่อเครื่องเล่น</th>
+            </tr>
+            <tr style="background-color: #a0f1e7" *ngFor="let item2 of showName">
+              <td>
+                {{ item2 }}
+              </td>
+            </tr>
+          </table>
+        </ion-col>
+        <ion-col class="basic">
+          <table border=1 align=center class="table">
+            <tr style="background-color: #f14acd">
+              <th>สถานะเครื่อง</th>
+            </tr>
+            <tr style="background-color: #daa0f1" *ngFor="let item1 of deviceStatus">
+              <td>
+                {{ item1 }}
+              </td>
+            </tr>
+          </table>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </fieldset>
+</ion-content>

@@ -1,0 +1,212 @@
+<ion-header>
+  <ion-navbar color="h">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title align=" center">ข้อมูลของฉัน</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content align='center' class="bg">
+  <fieldset>
+    <hr>
+    <ion-card style="background-color: #52C8D1" *ngIf='editNotready' class="ra">
+      <ion-card-header style="color :aliceblue">
+        <b>ข้อมูลของฉัน</b>
+      </ion-card-header>
+      <ion-card-content>
+        <ion-list margin-top="20">
+          <button ion-button class="btn" (click)="editText()">
+            <ion-icon name="edit"></ion-icon>&nbsp;
+            แก้ไข
+          </button>
+          <ion-item>
+            <ion-label>
+              <ion-icon name="ios-person-outline"></ion-icon>
+              รหัสนักศึกษา
+            </ion-label>
+            <ion-input type="text" [(ngModel)]="gsid" disabled="true"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label floating>
+              <ion-icon name="ios-briefcase"></ion-icon>
+              อีเมล
+            </ion-label>
+            <ion-input type="text" [(ngModel)]="email" disabled="true"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label floating>
+              <ion-icon name="ios-person-outline"></ion-icon>
+              ชื่อ-สกุล
+            </ion-label>
+            <ion-input type="text" [(ngModel)]="name" disabled="true"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label floating>
+              <ion-icon name="md-clipboard"></ion-icon>
+              วันเกิด
+            </ion-label>
+            <ion-input type="text" [(ngModel)]="birthday" disabled="true"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label floating>
+              <ion-icon name="md-clipboard"></ion-icon>
+              อายุ
+            </ion-label>
+            <ion-input type="text" [(ngModel)]="age" disabled="true"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label floating>
+              <ion-icon name="md-clipboard"></ion-icon>
+              เพศ
+            </ion-label>
+            <ion-input type="text" [(ngModel)]="gender" disabled="true"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label floating>
+              <ion-icon name="md-bulb"></ion-icon>
+              น้ำหนัก
+            </ion-label>
+            <ion-input type="text" [(ngModel)]="weight" disabled="true"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label floating>
+              <ion-icon name="md-bulb"></ion-icon>
+              ส่วนสูง
+            </ion-label>
+            <ion-input type="text" [(ngModel)]="height" disabled="true"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label floating>
+              <ion-icon name="ios-call-outline"></ion-icon>
+              เบอร์โทร
+            </ion-label>
+            <ion-input type="text" [(ngModel)]="tel" disabled="true"></ion-input>
+          </ion-item>
+        </ion-list>
+      </ion-card-content>
+    </ion-card>
+    <ion-card style="background-color: #52C8D1" *ngIf='editAlready' class="ra">
+      <ion-card-header style="color :aliceblue">
+        <b>ข้อมูลของฉัน</b>
+      </ion-card-header>
+      <ion-card-content>
+        <ion-list margin-top="20">
+          <button ion-button class="btn" (click)="saveEditText()">
+            <ion-icon name="edit"></ion-icon>&nbsp;
+            บันทึก
+          </button>
+          <ion-item>
+            <ion-label>
+              <ion-icon name="ios-person-outline"></ion-icon>
+              รหัสนักศึกษา
+            </ion-label>
+            <ion-input type="text" [(ngModel)]="gsid" disabled="true"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label floating>
+              <ion-icon name="ios-briefcase"></ion-icon>
+              อีเมล
+            </ion-label>
+            <ion-input type="text" [(ngModel)]="email" disabled="true"></ion-input>
+          </ion-item>
+
+          <ion-item>
+            <ion-label floating>
+              <ion-icon name="ios-person-outline"></ion-icon>
+              ชื่อ-สกุล
+            </ion-label>
+            <ion-input type="text" [(ngModel)]="name" disabled="false"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label floating>
+              <ion-icon name="md-clipboard"></ion-icon>
+              วันเกิด
+            </ion-label>
+            <ion-input type="text" [(ngModel)]="birthday" disabled="false"></ion-input>
+          </ion-item>
+
+          <ion-item>
+            <ion-label floating>
+              <ion-icon name="md-clipboard"></ion-icon>
+              อายุ
+            </ion-label>
+            <ion-input type="text" [(ngModel)]="age" disabled="false"></ion-input>
+          </ion-item>
+
+          <ion-item>
+            <ion-label floating>
+              <ion-icon name="md-clipboard"></ion-icon>
+              เพศ
+            </ion-label>
+            <ion-input type="text" [(ngModel)]="gender" disabled="false"></ion-input>
+          </ion-item>
+
+          <ion-item>
+            <ion-label floating>
+              <ion-icon name="md-bulb"></ion-icon>
+              น้ำหนัก
+            </ion-label>
+            <ion-input type="text" [(ngModel)]="weight" disabled="false"></ion-input>
+          </ion-item>
+
+          <ion-item>
+            <ion-label floating>
+              <ion-icon name="md-bulb"></ion-icon>
+              ส่วนสูง
+            </ion-label>
+            <ion-input type="text" [(ngModel)]="height" disabled="false"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label floating>
+              <ion-icon name="ios-call-outline"></ion-icon>
+              เบอร์โทร
+            </ion-label>
+            <ion-input type="text" [(ngModel)]="tel" disabled="false"></ion-input>
+          </ion-item>
+        </ion-list>
+      </ion-card-content>
+    </ion-card>
+    <hr>
+  </fieldset>
+
+  <fieldset>
+    <ion-card class="ra">
+      <ion-card-content>
+        BMI = {{bmi}}
+      </ion-card-content>
+    </ion-card>
+  </fieldset>
+  <ion-card class="ra">
+    <ion-card-content>
+      <ion-item class="top" style="background-color: rgb(7, 27, 94)" class="font">
+        <ion-label>แคลอรี่ที่ถูกเผาผลาญในวันที่</ion-label>
+        <ion-icon name="md-calendar"></ion-icon>
+        <ion-datetime displayFormat="MMM DD YYYY" [(ngModel)]="selectDate"></ion-datetime>
+      </ion-item>
+      <button ion-button class="btn" (click)="checkDate()">
+        <ion-icon name="search"></ion-icon>&nbsp;
+        ค้นหา
+      </button>
+      <ion-card *ngIf='checkCal'>
+        <ion-card-content>
+          <p><b>Calorie: {{ calorieBurn }} Calorie</b></p>
+          <p><b>Training Time: {{ trainingTime }} </b></p>
+        </ion-card-content>
+      </ion-card>
+    </ion-card-content>
+  </ion-card>
+
+  <div class="top">
+    <button ion-button class="btn" (click)="myQRCode()">
+      <ion-icon name="barcode"></ion-icon>&nbsp;
+      คิวอาร์โค้ดของฉัน
+    </button>
+  </div>
+  <ion-card *ngIf='buttonClicked'>
+    <ngx-qrcode [qrc-value]='createdCode'></ngx-qrcode>
+    <ion-card-content>
+      <p>โค้ดของฉัน: {{ createdCode }}</p>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

@@ -1,0 +1,84 @@
+page-profile {
+    .top{
+        margin-top: 40px;
+    }
+    .font{
+        color: #DAF7A6;
+    }
+    .bgi{
+        background-image:url('../assets/imgs/st.png');
+        
+        background-repeat: no-repeat, repeat;
+        background-size: 65px;
+        display: block;
+    }
+    
+    hr { 
+        
+        background: url('../assets/imgs/dumbbell1.png') no-repeat top center ;
+        background-size: contain;
+        display: block;
+        height: 18px;
+        border: 0;
+        position: relative;
+}
+
+hr:before,
+hr:after {
+        content: '';
+        display: block;
+        position: absolute;
+        background: #ffffff;
+        height: 2px;
+        top: 8px;
+}
+
+hr:before {
+        left: 0;
+        right: 50%;
+        margin-right: 10px;
+}
+
+hr:after {
+        right: 0;
+        left: 50%;
+        margin-left: 10px;
+}	
+fieldset{   
+    margin-top: 20px;
+    text-align: center;
+                     
+    border: 4px solid #ebf831;
+    border-radius: 6px;     
+    display: block;         
+}
+.bg{
+    background: #FFAFBD;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #ffc3a0, #FFAFBD);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #ffc3a0, #FFAFBD); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  }
+  .ra{
+    border-radius: 20px;
+    margin-top: 10px;
+  }
+  .btn {
+    background-color: rgb(151, 39, 58);
+  }
+  
+  .btn:hover {
+    background-color: rgb(241, 137, 155);
+  }
+  
+  .btn:focus {
+    background-color: rgb(228, 70, 97);
+  
+    /* The outline parameter surpresses the border
+    color / outline when focused */
+    outline: 1;
+  }
+  
+  .btn:active {
+    background-color: rgb(151, 39, 58);
+  }
+
+}

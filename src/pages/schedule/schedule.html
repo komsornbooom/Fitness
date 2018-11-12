@@ -1,0 +1,38 @@
+<ion-header>
+  <ion-navbar color="h">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title align= " center">ตารางคอร์สของฉัน</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding class="bg">
+  
+        <fieldset *ngIf='aerobicCourse'><legend align = left><b>คอร์สแอโรบิค</b></legend>
+          <button ion-button color = "dark" outline (click)="removeCourseAerobic()">
+              <ion-icon name="bin"></ion-icon>&nbsp;
+               ยกเลิกคอร์ส
+          </button>
+        <ion-card-content style="background-color:rgb(168, 238, 215)">
+          <p>คอร์สที่สมัคร: <b>{{ aerobicCourse }}</b></p>
+          <p>วันที่เปิดสอน: <b>{{ aerobicdate }}</b></p> 
+          <p>เวลา: <b>{{ aerobictime }}</b></p>
+        </ion-card-content>
+      </fieldset>
+
+     
+          <fieldset *ngIf='yogaCourse'><legend align = left><b>คอร์สโยคะ</b></legend>
+            <button ion-button color = "dark" outline (click)="removeCourseYoga()">
+                <ion-icon name="bin"></ion-icon>&nbsp;
+                 ยกเลิกคอร์ส
+            </button>
+          <ion-card-content style="background-color:rgb(225, 138, 236)">
+            <p>คอร์สที่สมัคร: <b>{{ yogaCourse }}</b></p>
+            <p>วันที่เปิดสอน: <b>{{ yogadate }}</b></p> 
+            <p>เวลา: <b>{{ yogatime }}</b></p>
+          </ion-card-content>
+        </fieldset>
+
+</ion-content>
